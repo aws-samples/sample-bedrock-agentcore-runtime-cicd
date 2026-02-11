@@ -73,7 +73,7 @@ jobs:
     - name: Set environment variables
       id: set-vars
       run: |
-        AGENT_NAME="strands_agent"
+        AGENT_NAME="strands_agent_cicd_test"
         ECR_REPOSITORY="${AGENT_NAME}"
         echo "AGENT_NAME=${AGENT_NAME}" >> $GITHUB_ENV
         echo "ECR_REPOSITORY=${ECR_REPOSITORY}" >> $GITHUB_ENV
