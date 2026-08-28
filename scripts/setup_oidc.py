@@ -68,7 +68,7 @@ def create_oidc_provider(iam_client):
         logger.info("Creating GitHub OIDC identity provider...")
         response = iam_client.create_open_id_connect_provider(
             Url=github_url,                    # GitHub's OIDC endpoint
-            ThumbprintList=[thumbprint],        # GitHub's certificate thumbprint
+            ThumbprintList=thumbprint,        # GitHub's certificate thumbprint
             ClientIDList=["sts.amazonaws.com"] # AWS STS as the audience
         )
         logger.info(f"Created OIDC provider: {response['OpenIDConnectProviderArn']}")
